@@ -34,8 +34,14 @@ dependencies {
   compileOnly("org.projectlombok:lombok")
   runtimeOnly("com.mysql:mysql-connector-j")
   annotationProcessor("org.projectlombok:lombok")
-  testImplementation("org.springframework.boot:spring-boot-starter-test")
-  testImplementation("org.jetbrains.kotlin:kotlin-test-junit5")
+
+  testImplementation("org.springframework.boot:spring-boot-starter-test") {
+    exclude(group = "org.mockito", module = "mockito-core")
+  }
+  testImplementation("org.testcontainers:testcontainers")
+  testImplementation("org.testcontainers:mysql")
+  testImplementation("org.mockito.kotlin:mockito-kotlin:5.4.0")
+
   testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 }
 

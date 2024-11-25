@@ -1,0 +1,17 @@
+services:
+  mysql:
+    container_name: coffee-order-mysql
+    image: mysql:8.2.0
+    restart: always
+    volumes:
+      - ./db/mysql/data:/var/lib/mysql
+    environment:
+      MYSQl_ROOT_USER: root
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: coffee-order
+      MYSQL_USER: yunolee
+      MYSQL_PASSWORD: yunolee@1234
+      TZ: Asia/Seoul
+    ports:
+      - 40036:3306
+    command: mysqld --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
