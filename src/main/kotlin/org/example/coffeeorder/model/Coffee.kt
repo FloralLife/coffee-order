@@ -9,7 +9,7 @@ import jakarta.persistence.OneToMany
 @Entity
 class Coffee(
   @Id @GeneratedValue(strategy = GenerationType.AUTO)
-  var id: Long,
+  var id: Long?,
   var price: Int,
 
   @OneToMany

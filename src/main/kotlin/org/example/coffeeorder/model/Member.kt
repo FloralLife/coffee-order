@@ -12,7 +12,7 @@ import jakarta.persistence.Table
 @Table(name = "members")
 class Member(
   @Id @GeneratedValue(strategy = GenerationType.AUTO)
-  var id: Long,
+  var id: Long?,
   var balance: Int,
 
   @OneToMany(mappedBy = "member", cascade = [(CascadeType.ALL)])
