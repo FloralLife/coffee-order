@@ -38,9 +38,10 @@ dependencies {
   testImplementation("org.springframework.boot:spring-boot-starter-test") {
     exclude(group = "org.mockito", module = "mockito-core")
   }
-  testImplementation("org.testcontainers:testcontainers")
-  testImplementation("org.testcontainers:mysql")
   testImplementation("org.mockito.kotlin:mockito-kotlin:5.4.0")
+  testImplementation("org.testcontainers:testcontainers")
+  testImplementation("org.testcontainers:junit-jupiter")
+  testImplementation("org.testcontainers:mysql")
 
   testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 }
