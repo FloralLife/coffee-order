@@ -7,14 +7,14 @@ import jakarta.persistence.GenerationType
 import jakarta.persistence.Id
 import jakarta.persistence.JoinColumn
 import jakarta.persistence.ManyToOne
-import lombok.AllArgsConstructor
+import jakarta.persistence.Table
 import lombok.Builder
 
 @Entity
 @Builder
-@AllArgsConstructor
+@Table(name = "orders")
 class Order(
-  @Id @GeneratedValue(strategy = GenerationType.AUTO)
+  @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
   var id: Long?,
 
   @ManyToOne(fetch = FetchType.LAZY)

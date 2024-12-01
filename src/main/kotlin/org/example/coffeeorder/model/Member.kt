@@ -11,7 +11,7 @@ import jakarta.persistence.Table
 @Entity
 @Table(name = "members")
 class Member(
-  @Id @GeneratedValue(strategy = GenerationType.AUTO)
+  @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
   var id: Long?,
   var balance: Int,
 
